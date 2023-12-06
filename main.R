@@ -1,10 +1,13 @@
 # Based on https://co-analysis.github.io/a11ytables/articles/a11ytables.html
 
 library(dplyr)
+library(readr)
 library(rjson)
 library(whisker)
 
-;kkjkcover_df <- tibble::tribble( 
+if (!dir.exists("r-output")) {dir.create("r-output")}
+
+cover_df <- tibble::tribble( 
   ~"subsection_title",  ~"subsection_content",
   "Description", "Aspects of automobile design and performance.",
   "Properties",  "Suppressed values are replaced with the value '[c]'.",
@@ -94,4 +97,10 @@ my_a11ytable <-
 
 my_wb <- a11ytables::generate_workbook(my_a11ytable)
 
-openxlsx::saveWorkbook(my_wb, "a11ytables-publication.xlsx")
+#openxlsx::saveWorkbook(my_wb, "a11ytables-publication.xlsx")
+
+
+example_data <- fromJSON(file = "example/data-for-template.json")
+content_xml_template <- read_file("template/content.xml")
+content_xml_rendered <- whisker.render(content_xml_template, example_data)
+cat(content_xml_rendered, file = "r-output/content.xml")
