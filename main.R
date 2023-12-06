@@ -1,8 +1,10 @@
 # Based on https://co-analysis.github.io/a11ytables/articles/a11ytables.html
 
 library(dplyr)
+library(rjson)
+library(whisker)
 
-cover_df <- tibble::tribble( 
+;kkjkcover_df <- tibble::tribble( 
   ~"subsection_title",  ~"subsection_content",
   "Description", "Aspects of automobile design and performance.",
   "Properties",  "Suppressed values are replaced with the value '[c]'.",
