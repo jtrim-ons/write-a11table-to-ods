@@ -1,0 +1,289 @@
+{
+  "coverSheetTitle": "Some pretend data",
+  "firstTocCell": "A3",
+  "lastTocCell": "B5",
+  "coverSheetContents": [
+    {
+      "isSubtitle": true,
+      "text": "Subtitle 1"
+    },
+    {
+      "isText": true,
+      "text": "Text 1a",
+      "rowCount": 1
+    },
+    {
+      "isText": true,
+      "text": "Text 1b",
+      "rowCount": 1
+    },
+    {
+      "isSubtitle": true,
+      "text": "Subtitle 2"
+    },
+    {
+      "isText": true,
+      "text": "Text 2a",
+      "rowCount": 1
+    },
+    {
+      "isText": true,
+      "text": "Text 2b",
+      "rowCount": 1
+    },
+    {
+      "isHyperlink": true,
+      "text": "Office for National Statistics",
+      "href": "https://www.ons.gov.uk",
+      "rowCount": 1
+    }
+  ],
+  "sheets": [
+    {
+      "sheetName": "Age",
+      "tableName": "Age",
+      "sheetIntroText": [
+        "This worksheet contains one table. Some cells refer to notes, which can be found on the notes worksheet.",
+        "Some introductory text [note 2][note 1]"
+      ],
+      "columns": [
+        {
+          "style": "text",
+          "heading": "Category [note 1]",
+          "isNumeric": false,
+          "headingLines": [
+            "Category [note 1]"
+          ]
+        },
+        {
+          "style": "number_with_commas",
+          "heading": "Selected group",
+          "isNumeric": true,
+          "headingLines": [
+            "Selected group"
+          ]
+        },
+        {
+          "style": "number_1dp",
+          "heading": "England and Wales with a really long title",
+          "isNumeric": true,
+          "headingLines": [
+            "England and Wales with a really long title"
+          ]
+        }
+      ],
+      "hasNotes": true,
+      "sheetNumber": 1,
+      "introText": [
+        {
+          "text": "This worksheet contains one table. Some cells refer to notes, which can be found on the notes worksheet.",
+          "isLastIntroRow": false
+        },
+        {
+          "text": "Some introductory text [note 2][note 1]",
+          "isLastIntroRow": true
+        }
+      ],
+      "firstTableCell": "A4",
+      "lastTableCell": "C6",
+      "rows": [
+        {
+          "cellsInRow": [
+            {
+              "isText": true,
+              "displayValue": "First category [note 1]"
+            },
+            {
+              "isNumeric": true,
+              "rawValue": 12345,
+              "displayValue": "12,345",
+              "style": "number_with_commas"
+            },
+            {
+              "isNumeric": true,
+              "rawValue": 45.6,
+              "displayValue": "45.6",
+              "style": "number_1dp"
+            }
+          ]
+        },
+        {
+          "cellsInRow": [
+            {
+              "isText": true,
+              "displayValue": "Second category"
+            },
+            {
+              "isNumeric": true,
+              "rawValue": 1234567,
+              "displayValue": "1,234,567",
+              "style": "number_with_commas"
+            },
+            {
+              "isNumeric": true,
+              "rawValue": 45.6,
+              "displayValue": "45.6",
+              "style": "number_1dp"
+            }
+          ]
+        }
+      ],
+      "columnStyles": [
+        {
+          "name": "colStyle0_0",
+          "widthCm": 4.59
+        },
+        {
+          "name": "colStyle0_1",
+          "widthCm": 2.4
+        },
+        {
+          "name": "colStyle0_2",
+          "widthCm": 2.4
+        }
+      ]
+    },
+    {
+      "sheetName": "Ethnicity",
+      "tableName": "Ethnicity",
+      "columns": [
+        {
+          "style": "text",
+          "heading": "Category",
+          "isNumeric": false,
+          "headingLines": [
+            "Category"
+          ]
+        },
+        {
+          "style": "number_1dp",
+          "heading": "Selected group",
+          "isNumeric": true,
+          "headingLines": [
+            "Selected group"
+          ]
+        },
+        {
+          "style": "number_1dp",
+          "heading": "England and Wales with a really long title\n(units)",
+          "isNumeric": true,
+          "headingLines": [
+            "England and Wales with a really long title",
+            "(units)"
+          ]
+        }
+      ],
+      "sheetIntroText": [
+        "This worksheet contains one table."
+      ],
+      "hasNotes": false,
+      "sheetNumber": 2,
+      "introText": [
+        {
+          "text": "This worksheet contains one table.",
+          "isLastIntroRow": true
+        }
+      ],
+      "firstTableCell": "A3",
+      "lastTableCell": "C6",
+      "rows": [
+        {
+          "cellsInRow": [
+            {
+              "isText": true,
+              "displayValue": "First category"
+            },
+            {
+              "isNumeric": true,
+              "rawValue": 12.3,
+              "displayValue": "12.3",
+              "style": "number_1dp"
+            },
+            {
+              "isNumeric": true,
+              "rawValue": 45.6,
+              "displayValue": "45.6",
+              "style": "number_1dp"
+            }
+          ]
+        },
+        {
+          "cellsInRow": [
+            {
+              "isText": true,
+              "displayValue": "Second category"
+            },
+            {
+              "isNumeric": true,
+              "rawValue": 12.3,
+              "displayValue": "12.3",
+              "style": "number_1dp"
+            },
+            {
+              "isNumeric": true,
+              "rawValue": 45.6,
+              "displayValue": "45.6",
+              "style": "number_1dp"
+            }
+          ]
+        },
+        {
+          "cellsInRow": [
+            {
+              "isText": true,
+              "displayValue": "Really long looooooong category"
+            },
+            {
+              "isNumeric": true,
+              "rawValue": 78.9,
+              "displayValue": "78.9",
+              "style": "number_1dp"
+            },
+            {
+              "isNumeric": true,
+              "rawValue": 45.6,
+              "displayValue": "45.6",
+              "style": "number_1dp"
+            }
+          ]
+        }
+      ],
+      "columnStyles": [
+        {
+          "name": "colStyle1_0",
+          "widthCm": 6.67
+        },
+        {
+          "name": "colStyle1_1",
+          "widthCm": 2.4
+        },
+        {
+          "name": "colStyle1_2",
+          "widthCm": 2.4
+        }
+      ]
+    }
+  ],
+  "coverSheetRowStyles": [
+    {
+      "styleName": "coverSheetRowStyle_1",
+      "rowHeightCm": 0.93
+    }
+  ],
+  "notes": [
+    {
+      "name": "[note 1]",
+      "text": "Here is a note",
+      "used": true
+    },
+    {
+      "name": "[note 2]",
+      "text": "Here is another note",
+      "used": true
+    }
+  ],
+  "hasNotes": true,
+  "firstNotesTableCell": "A3",
+  "lastNotesTableCell": "B5",
+  "tableCount": 5
+}
