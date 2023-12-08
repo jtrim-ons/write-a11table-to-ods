@@ -4,6 +4,7 @@ library(dplyr)
 library(readr)
 library(rjson)
 library(whisker)
+library(zip)
 
 if (!dir.exists("r-output")) {dir.create("r-output")}
 
@@ -99,8 +100,27 @@ my_wb <- a11ytables::generate_workbook(my_a11ytable)
 
 #openxlsx::saveWorkbook(my_wb, "a11ytables-publication.xlsx")
 
-
 example_data <- fromJSON(file = "example/data-for-template.json")
 content_xml_template <- read_file("template/content.xml")
 content_xml_rendered <- whisker.render(content_xml_template, example_data)
 cat(content_xml_rendered, file = "r-output/content.xml")
+
+zip_files_dir <- tempfile()
+dir.create(zip_files_dir)
+dir.create(paste0(zip_files_dir, '/META-INF'))
+
+ods_filename <- tempfile()
+file.copy('zip-containing-only-mimetype/mimetype.zip', ods_filename)
+
+xml_filenames = c('META-INF/manifest.xml', 'content.xml', 'meta.xml', 'styles.xml')
+for (filename in xml_filenames) {
+  xml_template <- read_file(paste0("template/", filename))
+  xml_rendered <- whisker.render(xml_template, example_data)
+  cat(xml_rendered, file = paste0(zip_files_dir, '/', filename))
+  zip_append(ods_filename, filename, root = zip_files_dir)
+}
+
+file.copy(ods_filename, 'r-output/out.ods')
+
+unlink(zip_files_dir, recursive = TRUE)
+unlink(ods_filename)
